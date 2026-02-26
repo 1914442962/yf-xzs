@@ -1,0 +1,25 @@
+#print_div{
+  font-size: 16px;
+  //display:none;
+  table{
+    width: 100%;
+    tr{
+      height: 24px;line-height: 24px;
+      td{
+        padding: 10px;
+      }
+      .print{
+        display: none;
+      }
+      .td_label{
+        text-align: center;width: 20%;font-weight: bold;
+      }
+      .td_value{
+        width: 80%;
+      }
+    }
+  }
+  .text_bold{
+    color: #333;font-weight: bold;
+  }
+}

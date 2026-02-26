@@ -1,0 +1,226 @@
+$themeColor: #03b5b7;
+$--colors: (
+  "primary": (
+    "base": $themeColor,
+  ),
+);
+@forward "element-plus/theme-chalk/src/common/var" with (
+  $colors: $--colors
+);
+@use "element-plus/theme-chalk/src/index" as *;
+
+.el-button--gradientGreen {
+  background-image: linear-gradient(
+    -90deg,
+    #000000 0%,
+    #006c56 0%,
+    #00d8ab 0%,
+    #18ba9e 100%
+  );
+  border-radius: 4px;
+  border: solid 1px #86ecd7;
+  color: #ffffff !important; //需要有！important
+  &.is-plain {
+    background-image: linear-gradient(0deg, #d0f7ef 0%, #ffffff 100%);
+    border: solid 1px #0db094;
+    color: #0db094;
+  }
+}
+
+.el-button--gradientDarkGreen {
+  background-image: linear-gradient(90deg, #12bbbb 0%, #00d0d3 100%);
+  border-radius: 4px;
+  border: solid 1px #86ecd7;
+  color: #ffffff !important;
+  &.is-plain {
+    background-image: linear-gradient(0deg, #d0f7ef 0%, #ffffff 100%);
+    border: solid 1px #0db094;
+    color: #0db094;
+  }
+}
+
+.el-button--gradientBlue {
+  background-image: linear-gradient(
+    -90deg,
+    #000000 0%,
+    #0e5e75 0%,
+    #1cbcea 0%,
+    #039fcc 100%
+  );
+  border-radius: 4px;
+  border: solid 1px #2ac7f3;
+  color: #ffffff !important;
+  &.is-plain {
+    background-image: linear-gradient(0deg, #ccebf3 0%, #ffffff 100%);
+    border: solid 1px #0bafd9;
+    color: #0bafd9;
+  }
+}
+.el-button--gradientRed {
+  background-image: linear-gradient(
+    -90deg,
+    #000000 0%,
+    #8b0000 0%,
+    #ff6b6b 0%,
+    #e03131 100%
+  );
+  border-radius: 4px;
+  border: solid 1px #f03e3e;
+  color: #ffffff !important;
+  &.is-plain {
+    background-image: linear-gradient(0deg, #f8e8e5 0%, #ffffff 100%);
+    border: solid 1px #f39487;
+    color: #e25d4c;
+  }
+}
+
+.el-button--gradientGray {
+  background-image: linear-gradient(
+    -90deg,
+    #000000 0%,
+    #596663 0%,
+    #b2ccc6 0%,
+    #8ea8a4 100%
+  );
+  border-radius: 4px;
+  border: solid 1px #b8d1cc;
+  color: #ffffff !important;
+}
+
+//组件弹窗的阴影
+:root {
+  --el-box-shadow-light: 0px 1px 12px 0px rgba(11, 174, 147, 0.16);
+}
+//输入框的icon颜色
+.el-input {
+  --el-input-icon-color: #03b5b7;
+}
+//下拉框的icon颜色
+.el-select {
+  --el-select-input-color: #03b5b7;
+}
+//messageBox的阴影
+.el-message-box {
+  --el-messagebox-box-shadow: 0px 0px 12px 0px rgba(0, 152, 122, 0.24);
+}
+//开关的颜色
+.el-switch.is-checked .el-switch__core {
+  background-image: linear-gradient(90deg, #18ba9e 0%, #00d6a8 100%) !important;
+}
+
+//element-plus树节点右侧按钮样式
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
+
+.el-input__wrapper {
+  position: relative;
+  .el-input__inner {
+    padding-right: 18px;
+  }
+  .el-input__suffix {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+//日期弹窗样式
+.el-date-table td.today .el-date-table-cell__text {
+  border: 1px solid $themeColor;
+  //border-radius: 4px;
+}
+.el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+  color: #ffffff !important;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, #17ba9e, #00d3a7);
+  border: none;
+  //border-radius: 4px;
+}
+//月份弹窗样式
+.el-month-table td.today .el-date-table-cell__text {
+  border: 1px solid $themeColor;
+}
+.el-month-table td.current:not(.disabled) .el-date-table-cell__text {
+  color: #ffffff !important;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, #17ba9e, #00d3a7);
+  border: none;
+}
+//年份弹窗样式
+.el-year-table td.today .el-date-table-cell__text {
+  border: 1px solid $themeColor;
+}
+.el-year-table td.current:not(.disabled) .el-date-table-cell__text {
+  color: #ffffff !important;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, #17ba9e, #00d3a7);
+  border: none;
+}
+
+//下拉弹窗item样式修改
+.el-select-dropdown__item {
+  &:hover {
+    color: $themeColor;
+    background: #e6f9f6;
+  }
+  &.is-selected {
+    background-image: linear-gradient(to right, #17ba9e, #00d3a7);
+    color: #fff;
+  }
+}
+.is-multiple .el-select-dropdown__item.is-selected {
+  color: $themeColor;
+  background: #e6f9f6;
+}
+
+//message box弹窗按钮样式
+.el-message-box__btns {
+  .el-button {
+    background-image: linear-gradient(
+      -90deg,
+      #000000 0%,
+      #596663 0%,
+      #b2ccc6 0%,
+      #8ea8a4 100%
+    );
+    border-radius: 4px;
+    border: solid 1px #b8d1cc;
+    color: #ffffff !important;
+  }
+  .el-button--primary {
+    background-image: linear-gradient(
+      -90deg,
+      #000000 0%,
+      #006c56 0%,
+      #00d8ab 0%,
+      #18ba9e 100%
+    );
+    border-radius: 4px;
+    border: solid 1px #86ecd7;
+    color: #ffffff !important; //需要有！important
+  }
+}
+
+//日期选择框,输入框，下拉框聚焦时加阴影
+.el-date-editor.is-focus .el-input__wrapper {
+  box-shadow:
+    0 0 4px 0 rgba(11, 174, 147, 0.24),
+    inset 0 0 0 1px #badbd5;
+}
+.el-input__wrapper.is-focus {
+  box-shadow:
+    0 0 4px 0 rgba(11, 174, 147, 0.24),
+    inset 0 0 0 1px #badbd5;
+}
+.el-select__wrapper.is-focused {
+  box-shadow:
+    0 0 4px 0 rgba(11, 174, 147, 0.24),
+    inset 0 0 0 1px #badbd5;
+}

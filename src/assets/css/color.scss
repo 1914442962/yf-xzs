@@ -1,0 +1,14 @@
+$blue: var(--blue-5);
+$lightblue: var(--blue-0);
+$lightgreen: #d7f4ed;
+.row-class {
+  background-color: $lightgreen;
+  color: var(--gray-7);
+}
+.row-red {
+  color: #f03e3e;
+}
+//.vxe-modal--header{
+//  background-color: $blue!important;
+//  color: #fff;
+//}

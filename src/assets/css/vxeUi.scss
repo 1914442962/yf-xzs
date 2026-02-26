@@ -1,0 +1,83 @@
+$themeColor: #03b5b7;
+//不能用这种方式全局颜色，分页聚焦时拿不到颜色
+
+//modal弹窗没有padding
+.noPaddingModal .vxe-modal--body-default {
+  padding: 0 !important;
+}
+
+//上传组件正确顺序
+.vxe-upload--file-action {
+  order: -1;
+}
+
+//表头文本加粗
+.vxe-cell--title span {
+  font-weight: bold;
+}
+
+html[data-vxe-ui-theme="light"] {
+  //主题色  不能用$themeColor全局颜色，分页聚焦时选尺寸拿不到颜色
+  --vxe-ui-font-primary-color: #03b5b7;
+  // 松开颜色
+  --vxe-ui-font-primary-lighten-color: rgb(78.6, 203.2, 204.6);
+  // 按下颜色
+  --vxe-ui-font-primary-darken-color: rgb(2.4, 144.8, 146.4);
+  //表格stripe颜色
+  --vxe-ui-table-row-striped-background-color: #f7feff;
+  //弹窗shadow
+  --vxe-ui-base-popup-box-shadow: 0 0 4px 0 rgba(11, 174, 147, 0.24);
+}
+.vxe-modal--wrapper.type--modal .vxe-modal--box {
+  box-shadow: 0 0 12px 0 rgba(0, 152, 122, 1);
+}
+//分页样式
+.vxe-pager .vxe-pager--num-btn.is--active {
+  background-image: linear-gradient(to bottom, #17ba9e, #00d3a7);
+  color: #fff !important;
+}
+.vxe-pager .vxe-select > .vxe-input .vxe-input--suffix-icon > i {
+  color: $themeColor;
+}
+.vxe-pager--left-wrapper {
+  float: left;
+}
+
+//modal弹窗样式优化
+.vxe-modal--wrapper:not(.vxe-image-preview-popup-wrapper) {
+  .vxe-modal--container {
+    background-color: #d6f9f2;
+    .vxe-modal--header {
+      background-color: transparent !important;
+      color: #fff;
+      background-image: url("@/assets/img/modal/modal_header.png");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      border-bottom: none !important;
+      .vxe-modal--header-title {
+        margin-left: 54px;
+        color: #333333;
+        font-weight: bold;
+      }
+      .vxe-modal--header-right {
+        .vxe-modal--close-btn {
+          background-image: url("@/assets/img/modal/modal_close.png");
+          background-size: 100% 100%;
+        }
+        color: #03b5b7;
+      }
+    }
+    .vxe-modal--content {
+      .page_content {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 10px;
+      }
+      .table_content {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 10px;
+      }
+    }
+  }
+}

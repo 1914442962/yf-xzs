@@ -1,0 +1,193 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-weight: normal;
+  vertical-align: middle;
+}
+b,
+strong {
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+  font-family:
+    "SourceHanSans", "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑",
+    sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+table {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: normal;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+
+a {
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:
+    "Microsoft YaHei", "Arial", "SourceHanSans", "黑体", "宋体", "微软雅黑",
+    sans-serif;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+.lf-node-content {
+  foreignObject {
+    overflow: visible;
+  }
+  svg {
+    overflow: visible;
+  }
+}
+//解决低版本浏览器滚动条不生效的问题
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+//:horizontal   :vertical
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #b5b5b5;
+}
