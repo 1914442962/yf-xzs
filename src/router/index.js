@@ -2,7 +2,6 @@ import { createRouter, createWebHashHistory } from "vue-router"; //只能用crea
 import CookiesUtil from "@/utils/cookies.utils";
 import store from "@/store/index.js";
 import { TOKEN_KEY } from "@/enums/CacheEnum.js";
-import bmglApi from "@/api/xzs/bmgl-api.js";
 
 const routes = [
   {

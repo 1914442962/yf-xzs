@@ -54,7 +54,7 @@ export default defineConfig({
     vitePluginVueDevtools(),
     viteMockServe({
       mockPath: "./mock", //模拟数据文件夹路径
-      enable: false,
+      enable: true,
       logger: true, //控制台显示请求日志,默认为true
     }),
   ],
@@ -62,7 +62,7 @@ export default defineConfig({
    * 在生产中服务时的基本公共路径。
    * @default '/'
    */
-  base: "./",
+  base: "/yf-xzs/",
   define: {
     "process.env": process.env,
   },

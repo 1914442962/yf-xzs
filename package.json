@@ -8,7 +8,8 @@
     "dev": "npx simple-git-hooks & vite --host",
     "build": "vite build",
     "build_new": "cross-env NODE_OPTIONS=--max_old_space_size=10240 vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
@@ -54,6 +55,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-vue": "^10.6.2",
+    "gh-pages": "^6.3.0",
     "lint-staged": "^15.2.10",
     "postcss-pxtorem": "^6.1.0",
     "prettier": "^3.7.3",
