@@ -7,7 +7,6 @@ import vue from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 import zipPack from "vite-plugin-zip-pack";
 import vitePluginVueDevtools from "vite-plugin-vue-devtools";
-import vitePluginImageTools from "vite-plugin-image-tools";
 import path from "path";
 import { viteMockServe } from "vite-plugin-mock";
 function resolve(dir) {
@@ -24,18 +23,6 @@ export default defineConfig({
       inDir: "dist",
       outDir: "archive",
       outFileName: `${process.env.VUE_APP_NAME} ${process.env.VUE_APP_VERSION}.zip`,
-    }),
-
-    //打包压缩图片并转成webp格式组件，还有一个是vite-plugin-images-format 1.0.4
-    vitePluginImageTools({
-      quality: 85,
-      enableWebp: true,
-      // includes: /\.(png|jpe?g|gif|tiff|bmp)$/i
-      includes: /\.(png|jpe?g|tiff|bmp)$/i, //gif压缩后动不了
-      webpConfig: {
-        limitSize: 51200, //超过50KB才转化成webp
-        deleteOriginImg: true, //在转化后删除源图片
-      },
     }),
     legacy({
       targets: ["defaults", "chrome 52"],
