@@ -34,9 +34,7 @@ import print from "vue3-print-nb";
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
-import('../mock/mockProdServer.js').then(({setupProdMockServer})=>{
-  setupProdMockServer()
-})
+
 dayjs.locale("zh-cn");
 // import VConsole from 'vconsole';
 // const vConsole = new VConsole({theme:"dark"})
@@ -92,7 +90,9 @@ app.use(VxeModal); //注册弹窗组件
 app.use(VxeUITable);
 app.use(print);
 app.use(VueKonva);
-
+import("../mock/mockProdServer.js").then(({ setupProdMockServer }) => {
+  setupProdMockServer();
+});
 app.mount("#app");
 // if(process.env.NODE_ENV === 'development'){//vue3-devtools生效
 //     if('__VUE_DEVTOOLS_GLOBAL_HOOK__' in window){

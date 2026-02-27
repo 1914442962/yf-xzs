@@ -6,7 +6,7 @@ import { TOKEN_KEY } from "@/enums/CacheEnum.js";
 import { ResultEnum } from "@/enums/ResultEnum.js";
 // 创建 axios 实例
 const service = axios.create({
-  baseURL: '',
+  baseURL: "/yfxzs",
   timeout: 50 * 1000,
   // headers: { "Content-Type": "application/json;charset=utf-8" },//注释掉不然上传文件不生效
 });

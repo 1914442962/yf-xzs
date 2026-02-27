@@ -6,6 +6,6 @@ import { createProdMockServer } from "vite-plugin-mock/client";
 // 可以使用 import.meta.glob功能来进行全部导入
 import index from "./index.js";
 export function setupProdMockServer() {
-  console.log('正在初始话')
+  console.log("正在初始话", index);
   createProdMockServer([...index]);
 }
