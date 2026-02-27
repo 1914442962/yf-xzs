@@ -5,7 +5,6 @@ import { defineConfig } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import vue from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
-import zipPack from "vite-plugin-zip-pack";
 import vitePluginVueDevtools from "vite-plugin-vue-devtools";
 import path from "path";
 import { viteMockServe } from "vite-plugin-mock";
@@ -17,13 +16,6 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsxPlugin(),
-
-    //自动打包压缩插件配置
-    zipPack({
-      inDir: "dist",
-      outDir: "archive",
-      outFileName: `${process.env.VUE_APP_NAME} ${process.env.VUE_APP_VERSION}.zip`,
-    }),
     legacy({
       targets: ["defaults", "chrome 52"],
       additionalLegacyPolyfills: [
@@ -41,11 +33,7 @@ export default defineConfig({
     vitePluginVueDevtools(),
     viteMockServe({
       mockPath: "./mock/", //mock文件地址
-      localEnabled: false, // 开发打包开关
-      prodEnabled: true, // 生产打包开关 // 这样可以控制关闭mock的时候不让mock打包到最终代码内
-      injectCode: ` import { setupProdMockServer } from './mock/mockProdServer'; setupProdMockServer(); `,
-      logger: false, //是否在控制台显示请求日志
-      supportTs: false, //打开后，可以读取 ts 文件模块。 请注意，打开后将无法监视.js 文件
+      enabled: true, // 开发打包开关
     }),
   ],
   /**
