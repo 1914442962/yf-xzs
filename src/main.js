@@ -34,8 +34,9 @@ import print from "vue3-print-nb";
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
-import {setupProdMockServer} from "../mock/mockProdServer.js";
-setupProdMockServer()
+import('../mock/mockProdServer.js').then(({setupProdMockServer})=>{
+  setupProdMockServer()
+})
 dayjs.locale("zh-cn");
 // import VConsole from 'vconsole';
 // const vConsole = new VConsole({theme:"dark"})
