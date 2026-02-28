@@ -1,0 +1,1 @@
+const e={positive_number:{rule:{pattern:/^(0|[1-9]\d*)(\.\d+)?$/,message:"格式不正确，请输入正数"}},cellphone:{rule:{pattern:/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/,message:"手机号格式不正确，请重新输入"}},date:{rule:{pattern:/^\d{4}-\d{2}-\d{2}$/,message:"日期格式不正确，请重新选择"}}};export{e as v};
