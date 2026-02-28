@@ -121,7 +121,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/yxfsmb/getPageData`,
+    url: new RegExp(`/yfxzs/yxfsmb/getPageData`),
     method: "post",
     response: ({ body }) => {
       return {
@@ -133,7 +133,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/admin/api/user/getCurrentUserMenu`,
+    url: new RegExp(`/yfxzs/admin/api/user/getCurrentUserMenu`),
     method: "post",
     response: ({ body }) => {
       return {
@@ -632,7 +632,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/xwb/queryLlt`,
+    url: new RegExp(`/yfxzs/xwb/queryLlt`),
     method: "post",
     response: ({ body }) => {
       return {
@@ -667,7 +667,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/xwb/getDwyxdt`,
+    url: new RegExp(`/yfxzs/xwb/getDwyxdt`),
     method: "post",
     response: ({ body }) => {
       return {
@@ -736,7 +736,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/first/queryAllFst`,
+    url: new RegExp(`/yfxzs/first/queryAllFst`),
     method: "post",
     response: ({ body }) => {
       return {
@@ -765,7 +765,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/first/queryInitFst`,
+    url: new RegExp(`/yfxzs/first/queryInitFst`),
     method: "post",
     response: ({ body }) => {
       return {
