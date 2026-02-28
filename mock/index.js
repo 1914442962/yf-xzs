@@ -13,7 +13,7 @@ const tableList = mockJS.mock({
 });
 export default [
   {
-    url: `/yfxzs/admin/api/user/newLogin`,
+    url: new RegExp(`/yfxzs/admin/api/user/newLogin`),
     method: "post",
     response: ({ body }) => {
       const { first, pwd } = body;
@@ -29,7 +29,7 @@ export default [
     },
   },
   {
-    url: `/yfxzs/login/getSysUserBoByToken`,
+    url: new RegExp(`/yfxzs/login/getSysUserBoByToken`),
     method: "post",
     response: ({ headers }) => {
       console.log(headers);

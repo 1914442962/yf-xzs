@@ -23,7 +23,7 @@ import ExcelJS from "exceljs";
 VxeUI.use(VxeUIPluginExportXLSX, { ExcelJS });
 VxeUI.use(VxeUIPluginValidator);
 VxeUI.use(VxeUIPluginRenderElement);
-import VxeModal from "@/packages/index";
+import VxeModal from "@/packages/index.js";
 import App from "@/App.vue";
 import router from "@/router";
 import store from "@/store";
